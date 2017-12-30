@@ -1,0 +1,11 @@
+{
+  "name": "functional-minification-examples",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Svehla/functional-minification-examples",
+  "author": "Jakub Svehla <svehl.jakub@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "^0.25.0"
+  }
+}
