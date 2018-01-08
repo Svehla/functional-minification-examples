@@ -25,7 +25,7 @@ function decAppToMat(mat1, mat2){
 
 const someFormula = (num1,num2) => (num1 + num2) / 2
 
-// 1. imperative
+// imperative
 function applyFnToMatrixs1(fn, mat1, mat2){
 	let resultMatrix = []
 	for(let i = 0; i < matrix1.length; i++) {
@@ -36,6 +36,8 @@ function applyFnToMatrixs1(fn, mat1, mat2){
 	}
 	return resultMatrix
 }
+// ramda minify hipster
+const applyFnToMatrixs5 = R.compose(R.zipWith, R.zipWith)
 
 const resultMatrix1 = applyFnToMatrixs1(someFormula, matrix1, matrix2)
 c({ resultMatrix1 })
