@@ -17,10 +17,10 @@ const matrix2 = [
 // 0. student imperative
 function decAppToMat(mat1, mat2){
   let resultMatrix = []
-  for(let i = 0; i < matrix1.length; i++) {
+  for(let i = 0; i < mat1.length; i++) {
     resultMatrix[i] = []
-    for(let j = 0; j < matrix2.length; j++) {
-      resultMatrix[i][j] = (matrix1[i][j] + matrix2[i][j]) / 2
+    for(let j = 0; j < mat2.length; j++) {
+      resultMatrix[i][j] = (mat1[i][j] + mat2[i][j]) / 2
     }
   }
   return resultMatrix
@@ -29,10 +29,10 @@ function decAppToMat(mat1, mat2){
 // 1. imperative
 function applyFnToMatrixs1(fn, mat1, mat2){
   let resultMatrix = []
-  for(let i = 0; i < matrix1.length; i++) {
+  for(let i = 0; i < mat1.length; i++) {
     resultMatrix[i] = []
-    for(let j = 0; j < matrix2.length; j++) {
-      resultMatrix[i][j] = fn(matrix1[i][j], matrix2[i][j])
+    for(let j = 0; j < mat2.length; j++) {
+      resultMatrix[i][j] = fn(mat1[i][j], mat2[i][j])
     }
   }
   return resultMatrix
@@ -41,9 +41,9 @@ function applyFnToMatrixs1(fn, mat1, mat2){
 
 // 2. ES6 functional
 const applyFnToMatrixs2 = (fn, mat1, mat2) => (
-  matrix1.map((row, i) =>
+  mat1.map((row, i) =>
     row.map((cell, j) =>
-      someFormula(cell, matrix2[i][j])
+      someFormula(cell, mat2[i][j])
     )
   )
 )
